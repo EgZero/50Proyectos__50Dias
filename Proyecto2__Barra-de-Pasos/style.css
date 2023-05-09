@@ -1,0 +1,95 @@
+:root {
+    --quicksand: "Quicksand", sans-serif;
+    --Montserrat: "Montserrat", sans-serif;
+    --OpenSans: "Open Sans", sans-serif;
+    --quicksand: "Quicksand", sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: #f5fcfc;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress_steps {
+    width: 350px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.progress__bar {
+    height: 6px;
+    position: absolute;
+    width: 0;
+    top: 39%;
+    left: 0;
+    border-radius: 25px;
+    background-color:#05f ;
+    transition: .5s ease-in-out;
+}
+
+.progress__bar::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    border-radius: 25px;
+    height: 6px;
+    left: 0;
+    z-index: -1;
+    background-color: #ccc;
+}
+
+.number{
+    text-align: center;
+    box-sizing: content-box;
+    display: inline-block;
+    background-color: #f5fcfc;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    z-index: 2;
+    transition: border-color .3s ease-in-out;
+}
+
+.done{
+    border: 5px solid #05f;
+}
+
+.button{
+    background: none;
+    border: none;
+    font-family: var(--quicksand);
+    font-weight: 500;
+    font-size: .9rem;
+    padding: 8px 25px;
+    margin: 15px 10px;
+    border-radius: 5px;
+}
+
+.button__prev{
+    border: 2px solid #05f;
+    background-color:#f5fcfc;
+    
+}
+
+.button__next{
+    background-color: #05f;
+    color: #f5fcfc;
+}
